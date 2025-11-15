@@ -467,7 +467,7 @@ body {
 /* ==================== RESPONSIVE STYLES ==================== */
 @media (max-width: 991px) {
     .navbar-collapse {
-        background:lightblue;
+        background:#D8DEDA;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-top: 1rem;

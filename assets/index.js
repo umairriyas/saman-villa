@@ -1,3 +1,39 @@
+// ==================== NAVBAR ACTIVE PAGE DETECTION ====================
+$(document).ready(function() {
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Remove active class from all nav links
+    $('.navbar-nav .nav-link').removeClass('active');
+    
+    // Add active class to matching link
+    $('.navbar-nav .nav-link').each(function() {
+        const linkHref = $(this).attr('href');
+        
+        // Check if link matches current page
+        if (linkHref === currentPage) {
+            $(this).addClass('active');
+        }
+        
+        // Special case: if on root/home, activate index.html link
+        if ((currentPage === '' || currentPage === '/' || currentPage === 'index.html') && linkHref === 'index.html') {
+            $(this).addClass('active');
+        }
+    });
+});
+
+// ==================== NAVBAR SCROLL EFFECT ====================
+$(window).on('scroll', function() {
+    if ($(window).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+    } else {
+        $('.navbar').removeClass('scrolled');
+    }
+});
+
+// ... rest of your existing code ...
+
+
 // ==================== NAVBAR SCROLL EFFECT ====================
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 50) {
