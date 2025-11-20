@@ -1,0 +1,510 @@
+/* ==================== AMENITIES PAGE SPECIFIC STYLES ==================== */
+
+/* ==================== AMENITIES HERO SECTION ==================== */
+.amenities-hero-section {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.amenities-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/ella-3-3.jpg') center/cover no-repeat;
+    opacity: 0.2;
+}
+
+.amenities-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(101, 67, 33, 0.85));
+}
+
+.amenities-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+.amenities-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.amenities-hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    font-style: italic;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* ==================== AMENITIES OVERVIEW SECTION ==================== */
+.amenities-overview-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.overview-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.overview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.overview-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.overview-card:hover .overview-icon {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.overview-icon i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.overview-card h4 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.overview-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ==================== AMENITIES CATEGORY SECTION ==================== */
+.amenities-category-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.amenities-category-section.alternate-bg {
+    background: var(--bg-light);
+}
+
+.category-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.category-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.category-image:hover img {
+    transform: scale(1.05);
+}
+
+.category-badge {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+}
+
+.category-badge i {
+    font-size: 1.5rem;
+}
+
+.category-content {
+    padding: 2rem 0;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.category-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.amenities-category-section.alternate-bg .amenity-item {
+    background: #fff;
+}
+
+.amenity-item:hover {
+    background: var(--secondary);
+    transform: translateX(5px);
+}
+
+.amenity-item i {
+    color: var(--primary);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.amenity-item span {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* ==================== TECHNOLOGY AMENITIES SECTION ==================== */
+.tech-amenities-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--bg-light) 100%);
+}
+
+.tech-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.tech-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.tech-card:hover .tech-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.tech-icon i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.tech-card h4 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.tech-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ==================== SERVICES SECTION ==================== */
+.services-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.service-card {
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    background: var(--secondary);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.service-card:hover i {
+    transform: scale(1.1);
+    color: var(--primary-dark);
+}
+
+.service-card h5 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ==================== POLICIES SECTION ==================== */
+.policies-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.policy-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    transition: var(--transition);
+    border-left: 4px solid var(--primary);
+}
+
+.policy-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+.policy-card h4 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.policy-card h4 i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.policy-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-card ul li {
+    padding: 0.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.policy-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 991.98px) {
+    .amenities-hero-section {
+        height: 40vh;
+        min-height: 350px;
+    }
+
+    .amenities-overview-section,
+    .amenities-category-section,
+    .tech-amenities-section,
+    .services-section,
+    .policies-section {
+        padding: 4rem 0;
+    }
+
+    .category-image img {
+        height: 300px;
+    }
+
+    .category-title {
+        font-size: 2rem;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .amenities-hero-section {
+        height: 35vh;
+        min-height: 300px;
+    }
+
+    .amenities-hero-title {
+        font-size: 2rem;
+    }
+
+    .amenities-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .overview-card,
+    .tech-card,
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .category-content {
+        padding: 1rem 0;
+    }
+
+    .category-title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .category-description {
+        text-align: center;
+    }
+
+    .category-badge {
+        position: static;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .amenity-item {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .category-image img {
+        height: 250px;
+    }
+
+    .overview-icon,
+    .tech-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .overview-icon i,
+    .tech-icon i {
+        font-size: 1.75rem;
+    }
+
+    .policy-card {
+        padding: 1.5rem;
+    }
+
+    .policy-card h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .amenities-hero-section {
+        height: auto;
+        min-height: auto;
+    }
+
+    .breadcrumb-nav {
+        display: none;
+    }
+
+    .category-image,
+    .overview-card,
+    .tech-card,
+    .service-card,
+    .policy-card {
+        page-break-inside: avoid;
+    }
+}

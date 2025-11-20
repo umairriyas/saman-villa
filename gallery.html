@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Saman Villa | Villa Photos & Virtual Tour</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/gallery.css">
+</head>
+<body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo-2.png" alt="Saman Villa Logo" class="logo-img">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Villa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="amenities.html">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="gallery-hero-section">
+        <div class="gallery-hero-overlay"></div>
+        <div class="gallery-hero-content">
+            <div class="container">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gallery</a></li>
+                    </ol>
+                </nav>
+                <h1 class="gallery-hero-title">Photo Gallery</h1>
+                <p class="gallery-hero-subtitle">Explore the beauty and comfort of Saman Villa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY STATS ==================== -->
+    <section class="gallery-stats-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-images"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="50">0</h3>
+                        <p>High-Quality Photos</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-house-door"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="4">0</h3>
+                        <p>Bedrooms</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="8">0</h3>
+                        <p>Different Areas</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="100">0</h3>
+                        <p>Luxury Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY FILTERS ==================== -->
+    <section class="gallery-filter-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Explore Our Villa</h2>
+                <p class="section-subtitle">Filter by category to see specific areas</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="bi bi-grid"></i> All Photos
+                </button>
+                <button class="filter-btn" data-filter="exterior">
+                    <i class="bi bi-building"></i> Exterior
+                </button>
+                <button class="filter-btn" data-filter="rooms">
+                    <i class="bi bi-door-open"></i> Bedrooms
+                </button>
+                <button class="filter-btn" data-filter="living">
+                    <i class="bi bi-tv"></i> Living Areas
+                </button>
+                <button class="filter-btn" data-filter="kitchen">
+                    <i class="bi bi-cup-hot"></i> Kitchen
+                </button>
+                <button class="filter-btn" data-filter="bathroom">
+                    <i class="bi bi-droplet"></i> Bathrooms
+                </button>
+                <button class="filter-btn" data-filter="outdoor">
+                    <i class="bi bi-tree"></i> Outdoor
+                </button>
+                <button class="filter-btn" data-filter="other">
+                    <i class="bi bi-star"></i> Other Features
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PHOTO GALLERY ==================== -->
+    <section class="photo-gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Exterior Photos -->
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/exterior-1.jpg" alt="Villa Exterior View 1">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/exterior-1.jpg" data-lightbox="villa-gallery" data-title="Villa Exterior View">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Villa Exterior</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/exterior-2.jpg" alt="Villa Front View">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/exterior-2.jpg" data-lightbox="villa-gallery" data-title="Villa Front View">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Front View</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item featured" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/exterior-3.jpg" alt="Villa Entrance">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/exterior-3.jpg" data-lightbox="villa-gallery" data-title="Villa Entrance">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Main Entrance</div>
+                    </div>
+                </div>
+
+                <!-- Bedroom Photos -->
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/room-1.jpg" alt="AC Bedroom 1">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/room-1.jpg" data-lightbox="villa-gallery" data-title="AC Bedroom 1">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">AC Bedroom 1</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item featured" data-category="rooms">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/room-2.jpg" alt="AC Bedroom 2">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/room-2.jpg" data-lightbox="villa-gallery" data-title="AC Bedroom 2">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">AC Bedroom 2</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/room-3.jpg" alt="Fan Room 1">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/room-3.jpg" data-lightbox="villa-gallery" data-title="Fan Room 1">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Fan Room 1</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/room-4.jpg" alt="Fan Room 2">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/room-4.jpg" data-lightbox="villa-gallery" data-title="Fan Room 2">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Fan Room 2</div>
+                    </div>
+                </div>
+
+                <!-- Living Area Photos -->
+                <div class="gallery-item featured" data-category="living">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/living-1.jpg" alt="Main Living Hall">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/living-1.jpg" data-lightbox="villa-gallery" data-title="Main Living Hall">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Main Living Hall</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="living">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/living-2.jpg" alt="TV Lounge">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/living-2.jpg" data-lightbox="villa-gallery" data-title="TV Lounge">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">TV Lounge</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="living">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/living-3.jpg" alt="Dining Area">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/living-3.jpg" data-lightbox="villa-gallery" data-title="Dining Area">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Dining Area</div>
+                    </div>
+                </div>
+
+                <!-- Kitchen Photos -->
+                <div class="gallery-item" data-category="kitchen">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/kitchen-1.jpg" alt="Kitchen View 1">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/kitchen-1.jpg" data-lightbox="villa-gallery" data-title="Modern Kitchen">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Kitchen</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kitchen">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/kitchen-2.jpg" alt="Kitchen View 2">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/kitchen-2.jpg" data-lightbox="villa-gallery" data-title="Kitchen Appliances">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Kitchen Details</div>
+                    </div>
+                </div>
+
+                <!-- Bathroom Photos -->
+                <div class="gallery-item" data-category="bathroom">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/bathroom-1.jpg" alt="Bathroom 1">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/bathroom-1.jpg" data-lightbox="villa-gallery" data-title="Modern Bathroom">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Bathroom 1</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="bathroom">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/bathroom-2.jpg" alt="Bathroom 2">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/bathroom-2.jpg" data-lightbox="villa-gallery" data-title="Attached Bathroom">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Bathroom 2</div>
+                    </div>
+                </div>
+
+                <!-- Outdoor Photos -->
+                <div class="gallery-item featured" data-category="outdoor">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/outdoor-1.jpg" alt="Garden Area">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/outdoor-1.jpg" data-lightbox="villa-gallery" data-title="Beautiful Garden">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Garden Area</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="outdoor">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/outdoor-2.jpg" alt="Parking Area">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/outdoor-2.jpg" data-lightbox="villa-gallery" data-title="Private Parking">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Parking Area</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="outdoor">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/outdoor-3.jpg" alt="Outdoor Seating">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/outdoor-3.jpg" data-lightbox="villa-gallery" data-title="Outdoor Relaxation">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Outdoor Seating</div>
+                    </div>
+                </div>
+
+                <!-- Other Features -->
+                <div class="gallery-item" data-category="other">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/detail-1.jpg" alt="Villa Details">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/detail-1.jpg" data-lightbox="villa-gallery" data-title="Architectural Details">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Architectural Details</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="other">
+                    <div class="gallery-image">
+                        <img src="assets/img/gallery/detail-2.jpg" alt="Interior Design">
+                        <div class="gallery-overlay">
+                            <a href="assets/img/gallery/detail-2.jpg" data-lightbox="villa-gallery" data-title="Interior Design">
+                                <i class="bi bi-zoom-in"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-caption">Interior Design</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg" id="loadMore">
+                    <i class="bi bi-arrow-down-circle me-2"></i> Load More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VIDEO TOUR SECTION ==================== -->
+    <section class="video-tour-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Virtual Tour</h2>
+                <p class="section-subtitle">Take a virtual walkthrough of Saman Villa</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <i class="bi bi-play-circle"></i>
+                            <p>Coming Soon: Virtual Villa Tour</p>
+                        </div>
+                        <!-- Replace with actual video embed when available -->
+                        <!-- <iframe src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Like What You See?</h2>
+                <p>Book your stay at Saman Villa and experience it in person</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light btn-lg me-3">
+                        <i class="bi bi-calendar-check me-2"></i> Book Now
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-whatsapp me-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Saman Villa</h5>
+                    <p>Experience luxury and comfort in the heart of Thalpe North. Your perfect Sri Lankan getaway awaits.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt-fill"></i> Ambawatta, Thalpe North, Sri Lanka</li>
+                        <li><i class="bi bi-telephone-fill"></i> +94 XX XXX XXXX</li>
+                        <li><i class="bi bi-envelope-fill"></i> info@samanvilla.lk</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Book Direct</h5>
+                    <p>Save on commission - book directly with us</p>
+                    <a href="contact.html" class="btn btn-light btn-sm w-100">Book Now</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Saman Villa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/index.js"></script>
+    <script src="assets/gallery.js"></script>
+</body>
+</html>
