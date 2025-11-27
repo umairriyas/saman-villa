@@ -1231,6 +1231,10 @@ body {
   width: 8px;
 }
 
+.breadcrumb {
+  margin-top: 90px;
+}
+
 ::-webkit-scrollbar-track {
   background: var(--bg-light);
 }
