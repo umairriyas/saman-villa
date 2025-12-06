@@ -153,8 +153,9 @@
                 <p>Fill out the form below and we'll get back to you shortly</p>
               </div>
 
-              <form id="bookingForm" class="contact-form">
+              <form id="bookingForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                 <div class="row g-3">
+                    <input type="hidden" name="access_key" value="3d2d2c5e-62af-445b-80e1-93bc6bc5e2ee">
                   <!-- Name -->
                   <div class="col-md-6">
                     <label for="fullName" class="form-label">Full Name *</label>
