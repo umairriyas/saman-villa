@@ -1,0 +1,21 @@
+# robots.txt for Saman Villa - samanvilla.lk
+
+User-agent: *
+Allow: /
+
+# Allow all pages
+Allow: /index.html
+Allow: /about.html
+Allow: /rooms.html
+Allow: /amenities.html
+Allow: /gallery.html
+Allow: /location.html
+Allow: /contact.html
+
+# Disallow admin or system folders (if any)
+Disallow: /admin/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Sitemap location
+Sitemap: https://samanvilla.lk/sitemap.xml
